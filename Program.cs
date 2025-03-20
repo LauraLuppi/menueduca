@@ -6,8 +6,6 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
-builder.Services.AddDbContext<Contexto>
-   (options => options.UseSqlServer("Data Source=SB-1490628\\SQLSENAI;Initial Catalog = MenuEduca" + ";Integrated Security = True;TrustServerCertificate = True"));
 
 var app = builder.Build();
 
