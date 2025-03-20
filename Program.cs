@@ -1,7 +1,15 @@
+using MenuEduca.Models;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddDbContext<Contexto>
+   (options => options.UseSqlServer("Data Source=SB-1490625\\SQLSENAI; Initial Catalog = MEenuEduca;Integrated Security = True;TrustServerCertificate = True"));
+
+
 
 var app = builder.Build();
 
